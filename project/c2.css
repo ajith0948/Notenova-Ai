@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+  margin: 0;
+  min-height: 100vh;
+  /*background: linear-gradient(135deg, #0a2540, #143d6b);*/
+  background: #007bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CONTAINER */
+.contact-container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* GLASS CARD */
+.contact-card {
+  max-width: 500px;
+  margin: auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  animation: fadeUp 0.9s ease;
+}
+
+/* HEADINGS */
+.contact-card h2 {
+  text-align: center;
+  color: #0a2540;
+}
+
+.contact-card p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #dce3ea;
+  font-size: 15px;
+  background: transparent;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* FLOATING LABEL 
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+  background: white;
+  padding: 0 5px;
+}
+  */
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.3s ease;
+
+  /* FIX HERE */
+  background: transparent;
+  padding: 0 6px;
+  border-radius: 6px;
+}
+
+
+/* ACTIVE STATES */
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.25);
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group textarea:focus + label,
+.input-group textarea:valid + label,
+.input-group select:focus + label,
+.input-group select:valid + label {
+  top: -8px;
+  font-size: 12px;
+  color: #007bff;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0,123,255,0.4);
+}
+
+/* INFO */
+.info {
+  margin-top: 25px;
+  text-align: center;
+  color: #0a2540;
+  font-size: 14px;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .contact-card {
+    padding: 25px;
+  }
+}
