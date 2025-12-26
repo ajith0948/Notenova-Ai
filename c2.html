@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | NoteNova AI</title>
+  <link rel="stylesheet" href="c2.css">
+</head>
+<body>
+
+<div class="contact-container">
+  <div class="contact-card">
+
+    <h2>Contact Us</h2>
+    <p>Let’s build the future of note-taking together</p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="040f503c-e6b9-4ea0-aafb-39f7a6f29652">
+    <input type="hidden" name="email" required>
+
+      <div class="input-group">
+        <input type="text" name="name" required>
+        <label>Name</label>
+      </div>
+
+      <div class="input-group">
+        <input type="email" name="email" required>
+        <label>Email</label>
+      </div>
+
+      <div class="input-group">
+        <input type="tel" pattern="[0-9]{10}" name="Phone" required>
+        <label>Phone Number</label>
+      </div>
+
+
+      <div class="input-group">
+        <textarea rows="4" name="message" required></textarea>
+        <label>Message</label>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="info">
+      <p>📧 support@notenova.ai</p>
+      <p>📍 India</p>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
